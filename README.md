@@ -206,10 +206,10 @@ class_names = ['BG', 'apple','orange']	#其中BG是background背景类
 image = skimage.io.imread("./images/apple_orange_test_001.jpg") 
 ```
 
-执行```python3 fortest.py```，在Xmanager6展示结果如下右图，左图是测试原图
+执行```python3 fortest.py```，在Xmanager6展示结果如下，上方是测试原图，下方是分割后的图
 
 ![avatar](README_images/mask_012.png)
-![avatar](README_images/mask_001.png)
+![avatar](README_images/mask_011.png)
 
 ## 参考资料
 
