@@ -28,7 +28,7 @@ conda install pillow=4.0.0
 
 > 注：如果是关闭后再次打开，直接在**Anaconda Prompt**中输入activate labelme，进入虚拟环境，然后输入labelme即可进行再次标注
 
-![mask_001](README_images\mask_001.png)
+![avatar](README_images/mask_001.png)
 
 点击左侧的Open Dir打开要标注的文件夹，然后点击Create Polygons进行图像标注，标注完成后，会将结果保存成.json格式，结果如下
 
