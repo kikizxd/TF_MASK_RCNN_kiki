@@ -32,7 +32,7 @@ conda install pillow=4.0.0
 
 点击左侧的Open Dir打开要标注的文件夹，然后点击Create Polygons进行图像标注，标注完成后，会将结果保存成.json格式，结果如下
 
-![mask_001](C:\Users\45307\Desktop\每月博客\mask_003.png)
+![avatar](README_images/mask_003.png)
 
 ## 2、 数据格式转换
 
@@ -58,7 +58,7 @@ train_data
 
 替换结束后，打开cmd，切换到**labelme_json_to_dataset.exe**目录下，该文件在Anaconda的Scripts的目录下
 
-![mask_001](C:\Users\45307\Desktop\每月博客\mask_006.png)
+![avatar](README_images/mask_006.png)
 
 然后执行
 
@@ -70,7 +70,7 @@ labelme_json_to_dataset.exe C:\Users\45307\Desktop\data_annocated\datasets_coco\
 
 执行完成后会在当前目录**C:\Anaconda\envs\labelme\Scripts**中生成多个文件夹，每个文件夹里包含以下5个文件，将产生的所有文件夹剪切至labelme_json文件夹中
 
-![mask_001](C:\Users\45307\Desktop\每月博客\mask_008.png)
+![avatar](README_images/mask_008.png)
 
 - cv2_mask
 
@@ -108,15 +108,15 @@ NUM_CLASSES = 2 + 1 #这里2是自己的类别数（如我这是苹果、橘子2
 dataset_root_path = "samples/trinmy/myinfo/"
 ```
 
-![mask_001](C:\Users\45307\Desktop\每月博客\mask_009.png)
+![avatar](README_images/mask_009.png)
 
 （3）add_class
 
 在代码的118行和155-160行，添加标注的类别名称，修改成自己数据集的类别名称
 
-<img src="C:\Users\45307\Desktop\每月博客\mask_013.png" alt="mask_001" style="zoom:100%;" />
+![avatar](README_images/mask_013.png)
 
-<img src="C:\Users\45307\Desktop\每月博客\mask_014.png" alt="mask_001" style="zoom:100%;" />
+![avatar](README_images/mask_014.png)
 
 执行```python3 train.py```即可进行模型训练
 
@@ -184,7 +184,7 @@ NUM_CLASSES = 2 + 1 #这里2是自己的类别数（如我这是苹果、橘子2
 
 在代码的29行，模型训练所得的权重路径，改成自己上步训练所得的权重路径，在logs文件夹底下
 
-<img src="C:\Users\45307\Desktop\每月博客\mask_015.png" alt="mask_001" style="zoom:100%;" />
+![avatar](README_images/mask_015.png)
 
 ```
 COCO_MODEL_PATH = os.path.join(MODEL_DIR,"shapes20191231T1128/mask_rcnn_shapes_0010.h5")
@@ -208,7 +208,8 @@ image = skimage.io.imread("./images/apple_orange_test_001.jpg")
 
 执行```python3 fortest.py```，在Xmanager6展示结果如下右图，左图是测试原图
 
-<img src="C:\Users\45307\Desktop\每月博客\mask_012.png" alt="mask_001" style="zoom:70%;" /><img src="C:\Users\45307\Desktop\每月博客\mask_011.png" alt="mask_001" style="zoom:60%;" />
+![avatar](README_images/mask_012.png)
+![avatar](README_images/mask_001.png)
 
 ## 参考资料
 
